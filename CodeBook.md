@@ -38,25 +38,25 @@ Both data sets are built from the same variables:
 * activity - one of the 6 activities:  
   + WALKING  
   + WALKING_UPSTAIRS  
-  +WALKING_DOWNSTAIRS  
-  +SITTING  
-  +STANDING  
-  +LAYING  
+  + WALKING_DOWNSTAIRS  
+  + SITTING  
+  + STANDING  
+  + LAYING  
 * The semantics of the following feature vector variables are described in the features_info.txt file of the original data set. Note that for each variable we keep the mean and std values  
-  +tBodyAcc-XYZ  
-  +tGravityAcc-XYZ  
-  +tBodyAccJerk-XYZ  
-  +tBodyGyro-XYZ  
-  +tBodyGyroJerk-XYZ  
-  +tBodyAccMag  
-  +tGravityAccMag  
-  +tBodyAccJerkMag  
-  +tBodyGyroMag  
-  +tBodyGyroJerkMag  
-  +fBodyAcc-XYZ  
-  +fBodyAccJerk-XYZ  
-  +fBodyGyro-XYZ  
-  +fBodyAccMag  
-  +fBodyAccJerkMag  
-  +fBodyGyroMag  
-  +fBodyGyroJerkMag  
+  + tBodyAcc-XYZ  
+  + tGravityAcc-XYZ  
+  + tBodyAccJerk-XYZ  
+  + tBodyGyro-XYZ  
+  + tBodyGyroJerk-XYZ  
+  + tBodyAccMag  
+  + tGravityAccMag  
+  + tBodyAccJerkMag  
+  + tBodyGyroMag  
+  + tBodyGyroJerkMag  
+  + fBodyAcc-XYZ  
+  + fBodyAccJerk-XYZ  
+  + fBodyGyro-XYZ  
+  + fBodyAccMag  
+  + fBodyAccJerkMag  
+  + fBodyGyroMag  
+  + fBodyGyroJerkMag   
