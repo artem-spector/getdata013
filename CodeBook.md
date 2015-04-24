@@ -36,8 +36,8 @@ The second step is simple - the aggregate function is applied to the data frame 
 Both data sets are built from the same variables:  
 * subject - identifies the person performing the activity. Range from 1 to 30
 * activity - one of the 6 activities:  
-  +WALKING  
-  +WALKING_UPSTAIRS  
+  + WALKING  
+  + WALKING_UPSTAIRS  
   +WALKING_DOWNSTAIRS  
   +SITTING  
   +STANDING  
