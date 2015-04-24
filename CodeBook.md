@@ -14,9 +14,9 @@ On the second step mean values are calculated for each variable, aggregated by t
 #Step 1 details
 
 To perform the required transformation the script does the following:
-1. read the variable names from the file *features.txt*
-2. creates the index vector of the names containing substrings "mean()" or "std()"
-3. since the bracket characters are illegal for the column names, remove those characters from the variable names read on step 1.
+1.read the variable names from the file *features.txt*
+2.creates the index vector of the names containing substrings "mean()" or "std()"
+3.since the bracket characters are illegal for the column names, remove those characters from the variable names read on step 1.
 4. read the activity labels from the file *activity_labels.txt*  
 The data obtained in steps 1 to 4 is common for the test and training sets, and is used for processing each of them.  
 
