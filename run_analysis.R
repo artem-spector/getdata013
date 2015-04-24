@@ -1,6 +1,6 @@
 # read the training and test data and organize them in one dataset
 # with subject and activity columns, and proper variable labels
-aggregateTrainAndTestData <- function(rootDir) {
+mergeTestAndTrainData <- function(rootDir) {
     
     readDataFile <- function(name, ...) {
         file <- paste(rootDir, "/", name, ".txt", sep = "")
@@ -31,7 +31,8 @@ aggregateTrainAndTestData <- function(rootDir) {
     }
 
     featureNames<-readDataFile("features")[[2]]
-    features<-grepl("mean|std", featureNames)
+    features<-grepl("mean\\(\\)|std\\(\\)", featureNames)
+    featureNames <- sub("\\(\\)", "", featureNames)
     
     activities <- readDataFile("activity_labels")
     
@@ -42,7 +43,10 @@ levelToLabel <- function(level, table) {
     factor(level, levels = table[[1]], labels = table[[2]])
 }
 
-tideUp <- function() {
-    data <- aggregateTrainAndTestData("UCI HAR Dataset")
-    aggregate(data[,3:81], list(subject = data$subject, activity = data$activity), mean)
+run_analysis <- function() {
+    data <- mergeTestAndTrainData("UCI HAR Dataset")
+    write.table(data, file = "X_test_and_train.txt", row.name = FALSE)
+    
+    res <- aggregate(data[,3:length(data)], list(subject = data$subject, activity = data$activity), mean)
+    write.table(res, file = "X_mean_by_subject_activity.txt", row.names = FALSE)
 }
