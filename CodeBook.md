@@ -6,9 +6,8 @@ During the processing each of these sets goes through the following conversion:
 1. values for the subject and activity are added for each measurement   
 2. only the values representing mean and standard deviation are taken  
 3. the variable descriptive names are used as the measurment column labels    
-After this conversion the test and training data sets are merged to create one data set, which is writtent into the file *X_test_and_train.txt* 
 
-On the second step mean values are calculated for each variable, aggregated by the subject and activity. 
+After this conversion the test and training data sets are merged to create one data set, and mean values are calculated for each variable, aggregated by the subject and activity. 
 
 # The variables of the resulting data set
 
