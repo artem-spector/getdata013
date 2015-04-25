@@ -45,8 +45,7 @@ levelToLabel <- function(level, table) {
 
 run_analysis <- function() {
     data <- mergeTestAndTrainData("UCI HAR Dataset")
-    write.table(data, file = "X_test_and_train.txt", row.name = FALSE)
     
     res <- aggregate(data[,3:length(data)], list(subject = data$subject, activity = data$activity), mean)
-    write.table(res, file = "X_mean_by_subject_activity.txt", row.names = FALSE)
+    write.table(res, file = "subject_activity_summary.txt", row.names = FALSE)
 }
